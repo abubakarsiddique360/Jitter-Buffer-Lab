@@ -1,0 +1,29 @@
+{
+  "name": "hand-written",
+  "interval_ms": 20.0,
+  "jitter_ms": 2.0,
+  "loss": 0.05,
+  "base_delay_ms": 5.0,
+  "packets": [
+    {"index": 0, "sent_ms": 0, "arrival_ms": 4, "payload_bytes": 960},
+    {"index": 1, "sent_ms": 20, "arrival_ms": 26, "payload_bytes": 960},
+    {"index": 2, "sent_ms": 40, "arrival_ms": 45, "payload_bytes": 960},
+    {"index": 3, "sent_ms": 60, "arrival_ms": 67, "payload_bytes": 960},
+    {"index": 4, "sent_ms": 80, "arrival_ms": 85, "payload_bytes": 960},
+    {"index": 5, "sent_ms": 100, "arrival_ms": 104, "payload_bytes": 960},
+    {"index": 6, "sent_ms": 120, "arrival_ms": 126, "payload_bytes": 960},
+    {"index": 7, "sent_ms": 140, "arrival_ms": 148, "payload_bytes": 960},
+    {"index": 8, "sent_ms": 160, "arrival_ms": 165, "payload_bytes": 960},
+    {"index": 9, "sent_ms": 180, "arrival_ms": 240, "payload_bytes": 960},
+    {"index": 10, "sent_ms": 200, "arrival_ms": 262, "payload_bytes": 960},
+    {"index": 11, "sent_ms": 220, "arrival_ms": 227, "payload_bytes": 960},
+    {"index": 12, "sent_ms": 240, "arrival_ms": 245, "payload_bytes": 960},
+    {"index": 13, "sent_ms": 260, "arrival_ms": 266, "payload_bytes": 960},
+    {"index": 14, "sent_ms": 280, "arrival_ms": 284, "payload_bytes": 960},
+    {"index": 15, "sent_ms": 300, "arrival_ms": null, "payload_bytes": 960},
+    {"index": 16, "sent_ms": 320, "arrival_ms": 325, "payload_bytes": 960},
+    {"index": 17, "sent_ms": 340, "arrival_ms": 347, "payload_bytes": 960},
+    {"index": 18, "sent_ms": 360, "arrival_ms": 366, "payload_bytes": 960},
+    {"index": 19, "sent_ms": 380, "arrival_ms": 385, "payload_bytes": 960}
+  ]
+}

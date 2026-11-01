@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jitter-buffer-lab"
+version = "1.0.0"
+description = "Simulate real-time PCM packet arrival and measure what each jitter-buffer policy costs in latency and dropouts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ABU BAKAR SIDDIQUE", email = "abs2003.edu@gmail.com" }]
+dependencies = []
+
+[project.scripts]
+jitter-lab = "jitter_buffer_lab.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "pillow>=10", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]

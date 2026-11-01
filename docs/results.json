@@ -1,0 +1,313 @@
+{
+  "trace_packets": 1500,
+  "interval_ms": 20.0,
+  "scenarios": {
+    "lan": {
+      "generator": {
+        "jitter_ms": 2.0,
+        "loss": 0.0005,
+        "base_delay_ms": 3.0
+      },
+      "loss_rate": 0.00133,
+      "smallest_fixed_delay_for_no_avoidable_underruns_ms": 5.0,
+      "policies": [
+        {
+          "policy": "fixed 0ms",
+          "trace": "lan",
+          "packets": 1500,
+          "underruns": 1500,
+          "underrun_rate": 1.0,
+          "mean_buffer_latency_ms": 0.0,
+          "p95_buffer_latency_ms": 0.0,
+          "max_depth_packets": 0
+        },
+        {
+          "policy": "fixed 20ms",
+          "trace": "lan",
+          "packets": 1500,
+          "underruns": 2,
+          "underrun_rate": 0.00133,
+          "mean_buffer_latency_ms": 20.0,
+          "p95_buffer_latency_ms": 20.0,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "fixed 50ms",
+          "trace": "lan",
+          "packets": 1500,
+          "underruns": 2,
+          "underrun_rate": 0.00133,
+          "mean_buffer_latency_ms": 50.0,
+          "p95_buffer_latency_ms": 50.0,
+          "max_depth_packets": 3
+        },
+        {
+          "policy": "measured p99 (5ms)",
+          "trace": "lan",
+          "packets": 1500,
+          "underruns": 17,
+          "underrun_rate": 0.01133,
+          "mean_buffer_latency_ms": 4.962,
+          "p95_buffer_latency_ms": 4.962,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "adaptive (max +150ms)",
+          "trace": "lan",
+          "packets": 1500,
+          "underruns": 4,
+          "underrun_rate": 0.00267,
+          "mean_buffer_latency_ms": 5.299,
+          "p95_buffer_latency_ms": 5.307,
+          "max_depth_packets": 1
+        }
+      ]
+    },
+    "wifi": {
+      "generator": {
+        "jitter_ms": 8.0,
+        "loss": 0.004,
+        "base_delay_ms": 6.0
+      },
+      "loss_rate": 0.00667,
+      "smallest_fixed_delay_for_no_avoidable_underruns_ms": 14.0,
+      "policies": [
+        {
+          "policy": "fixed 0ms",
+          "trace": "wifi",
+          "packets": 1500,
+          "underruns": 1285,
+          "underrun_rate": 0.85667,
+          "mean_buffer_latency_ms": 0.0,
+          "p95_buffer_latency_ms": 0.0,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "fixed 20ms",
+          "trace": "wifi",
+          "packets": 1500,
+          "underruns": 10,
+          "underrun_rate": 0.00667,
+          "mean_buffer_latency_ms": 20.0,
+          "p95_buffer_latency_ms": 20.0,
+          "max_depth_packets": 2
+        },
+        {
+          "policy": "fixed 50ms",
+          "trace": "wifi",
+          "packets": 1500,
+          "underruns": 10,
+          "underrun_rate": 0.00667,
+          "mean_buffer_latency_ms": 50.0,
+          "p95_buffer_latency_ms": 50.0,
+          "max_depth_packets": 3
+        },
+        {
+          "policy": "measured p99 (14ms)",
+          "trace": "wifi",
+          "packets": 1500,
+          "underruns": 25,
+          "underrun_rate": 0.01667,
+          "mean_buffer_latency_ms": 13.8,
+          "p95_buffer_latency_ms": 13.8,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "adaptive (max +150ms)",
+          "trace": "wifi",
+          "packets": 1500,
+          "underruns": 14,
+          "underrun_rate": 0.00933,
+          "mean_buffer_latency_ms": 14.134,
+          "p95_buffer_latency_ms": 14.163,
+          "max_depth_packets": 1
+        }
+      ]
+    },
+    "congested": {
+      "generator": {
+        "jitter_ms": 14.0,
+        "loss": 0.02,
+        "base_delay_ms": 15.0
+      },
+      "loss_rate": 0.02067,
+      "smallest_fixed_delay_for_no_avoidable_underruns_ms": 29.0,
+      "policies": [
+        {
+          "policy": "fixed 0ms",
+          "trace": "congested",
+          "packets": 1500,
+          "underruns": 1500,
+          "underrun_rate": 1.0,
+          "mean_buffer_latency_ms": 0.0,
+          "p95_buffer_latency_ms": 0.0,
+          "max_depth_packets": 0
+        },
+        {
+          "policy": "fixed 20ms",
+          "trace": "congested",
+          "packets": 1500,
+          "underruns": 476,
+          "underrun_rate": 0.31733,
+          "mean_buffer_latency_ms": 20.0,
+          "p95_buffer_latency_ms": 20.0,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "fixed 50ms",
+          "trace": "congested",
+          "packets": 1500,
+          "underruns": 31,
+          "underrun_rate": 0.02067,
+          "mean_buffer_latency_ms": 50.0,
+          "p95_buffer_latency_ms": 50.0,
+          "max_depth_packets": 3
+        },
+        {
+          "policy": "measured p99 (28ms)",
+          "trace": "congested",
+          "packets": 1500,
+          "underruns": 46,
+          "underrun_rate": 0.03067,
+          "mean_buffer_latency_ms": 28.462,
+          "p95_buffer_latency_ms": 28.462,
+          "max_depth_packets": 2
+        },
+        {
+          "policy": "adaptive (max +150ms)",
+          "trace": "congested",
+          "packets": 1500,
+          "underruns": 36,
+          "underrun_rate": 0.024,
+          "mean_buffer_latency_ms": 29.728,
+          "p95_buffer_latency_ms": 29.807,
+          "max_depth_packets": 2
+        }
+      ]
+    },
+    "spiky": {
+      "generator": {
+        "jitter_ms": 3.0,
+        "loss": 0.002,
+        "base_delay_ms": 6.0,
+        "spike_every": 120,
+        "spike_ms": 45.0
+      },
+      "loss_rate": 0.00267,
+      "smallest_fixed_delay_for_no_avoidable_underruns_ms": 54.0,
+      "policies": [
+        {
+          "policy": "fixed 0ms",
+          "trace": "spiky",
+          "packets": 1500,
+          "underruns": 1500,
+          "underrun_rate": 1.0,
+          "mean_buffer_latency_ms": 0.0,
+          "p95_buffer_latency_ms": 0.0,
+          "max_depth_packets": 0
+        },
+        {
+          "policy": "fixed 20ms",
+          "trace": "spiky",
+          "packets": 1500,
+          "underruns": 16,
+          "underrun_rate": 0.01067,
+          "mean_buffer_latency_ms": 20.0,
+          "p95_buffer_latency_ms": 20.0,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "fixed 50ms",
+          "trace": "spiky",
+          "packets": 1500,
+          "underruns": 12,
+          "underrun_rate": 0.008,
+          "mean_buffer_latency_ms": 50.0,
+          "p95_buffer_latency_ms": 50.0,
+          "max_depth_packets": 3
+        },
+        {
+          "policy": "measured p99 (9ms)",
+          "trace": "spiky",
+          "packets": 1500,
+          "underruns": 19,
+          "underrun_rate": 0.01267,
+          "mean_buffer_latency_ms": 8.985,
+          "p95_buffer_latency_ms": 8.985,
+          "max_depth_packets": 1
+        },
+        {
+          "policy": "adaptive (max +150ms)",
+          "trace": "spiky",
+          "packets": 1500,
+          "underruns": 9,
+          "underrun_rate": 0.006,
+          "mean_buffer_latency_ms": 50.274,
+          "p95_buffer_latency_ms": 54.384,
+          "max_depth_packets": 2
+        }
+      ]
+    }
+  },
+  "captured_example": {
+    "file": "examples/wifi-capture.json",
+    "packets": 500,
+    "policies": [
+      {
+        "policy": "fixed 0ms",
+        "trace": "wifi",
+        "packets": 500,
+        "underruns": 426,
+        "underrun_rate": 0.852,
+        "mean_buffer_latency_ms": 0.0,
+        "p95_buffer_latency_ms": 0.0,
+        "max_depth_packets": 1
+      },
+      {
+        "policy": "fixed 20ms",
+        "trace": "wifi",
+        "packets": 500,
+        "underruns": 5,
+        "underrun_rate": 0.01,
+        "mean_buffer_latency_ms": 20.0,
+        "p95_buffer_latency_ms": 20.0,
+        "max_depth_packets": 2
+      },
+      {
+        "policy": "fixed 50ms",
+        "trace": "wifi",
+        "packets": 500,
+        "underruns": 5,
+        "underrun_rate": 0.01,
+        "mean_buffer_latency_ms": 50.0,
+        "p95_buffer_latency_ms": 50.0,
+        "max_depth_packets": 3
+      },
+      {
+        "policy": "measured p99 (14ms)",
+        "trace": "wifi",
+        "packets": 500,
+        "underruns": 10,
+        "underrun_rate": 0.02,
+        "mean_buffer_latency_ms": 13.756,
+        "p95_buffer_latency_ms": 13.756,
+        "max_depth_packets": 1
+      },
+      {
+        "policy": "adaptive (max +150ms)",
+        "trace": "wifi",
+        "packets": 500,
+        "underruns": 9,
+        "underrun_rate": 0.018,
+        "mean_buffer_latency_ms": 14.074,
+        "p95_buffer_latency_ms": 14.163,
+        "max_depth_packets": 1
+      }
+    ]
+  },
+  "timeline": {
+    "packets_shown": 420,
+    "max_hold_ms": 52.96,
+    "concealed_in_window": 4
+  }
+}
